@@ -17,21 +17,17 @@ This project is designed for learning, experimenting, and open-source contributi
 
 ## 🧩 Project Structure
 css-animation-gallery/
-│
 ├── index.html              # Homepage gallery
 ├── css/
 │   ├── base.css            # Layout and base styles
 │   ├── theme.css           # Light/Dark theme variables
 │   ├── accessibility.css   # Reduced motion support
-│
-├── animations/
-│   ├── button/             # Button animations
-│   ├── text/               # Text animations
-│   └── loader/             # Loader animations
-│
+│   └── animations/
+│       ├── button/         # Button animations
+│       ├── text/           # Text animations
+│       └── loader/         # Loader animations
 ├── js/
-│   └── theme.js             # Theme toggle logic
-│
+│   └── theme.js            # Theme toggle logic
 └── README.md
 
 ---
