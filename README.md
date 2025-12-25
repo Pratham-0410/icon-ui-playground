@@ -16,22 +16,39 @@ This project is designed for learning, experimenting, and open-source contributi
 ---
 
 ## 🧩 Project Structure
-# Project Structure
-
-```text
-css-animation-gallery/
-├── index.html              # Homepage gallery
-├── css/
-│   ├── base.css            # Layout and base styles
-│   ├── theme.css           # Light/Dark theme variables
-│   ├── accessibility.css   # Reduced motion support
-│   └── animations/
-│       ├── button/         # Button animations
-│       ├── text/           # Text animations
-│       └── loader/         # Loader animations
-├── js/
-│   └── theme.js            # Theme toggle logic
-└── README.md
+```
+icon-ui-playground/
+│
+├── index.html                    # Homepage gallery
+├── README.md                     # Project documentation
+├── CONTRIBUTING.md               # Contribution guidelines
+│
+├── css/                          # Stylesheets
+│   ├── base.css                 # Layout and base styles
+│   ├── theme.css                # Light/Dark theme variables
+│   ├── accessibility.css        # Reduced motion support
+│   ├── animations.css           # Animation utilities
+│   ├── animation-theme.css      # Animation theme styles
+│   └── styles.css               # Additional styles
+│
+├── js/                           # JavaScript files
+│   └── theme.js                 # Theme toggle logic
+│
+├── components/                   # Reusable component examples
+│   ├── button.html              # Button component
+│   ├── card.html                # Card component
+│   └── loader.html              # Loader component
+│
+├── animations/                   # Animation demos
+│   ├── button/
+│   │   └── button-hover.html    # Button hover animation
+│   ├── text/
+│   │   └── text-fade-in.html    # Text fade-in animation
+│   └── loader/
+│       └── loader-spin.html     # Loader spin animation
+│
+└── docs/                         # Documentation (future use)
+```
 
 ---
 
