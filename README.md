@@ -16,6 +16,9 @@ This project is designed for learning, experimenting, and open-source contributi
 ---
 
 ## 🧩 Project Structure
+# Project Structure
+
+```text
 css-animation-gallery/
 ├── index.html              # Homepage gallery
 ├── css/
