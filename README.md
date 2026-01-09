@@ -7,20 +7,30 @@ This project is designed to grow as a **developer-friendly UI tool**, and contri
 
 ---
 
-```md
 ## 📁 Project Structure
 
 ```text
 icon-ui-playground/
 ├── index.html              # Main entry point
+├── README.md               # Project documentation
+├── CONTRIBUTING.md         # Contribution guidelines
 ├── css/                    # Stylesheets
-├── js/                     # JavaScript logic
-├── components/             # Reusable UI components
-├── animations/             # Animation examples
+│   ├── base.css
+│   ├── theme.css
+│   ├── accessibility.css
+│   ├── animations.css
+│   └── styles.css
+├── js/                     # JavaScript
+│   └── theme.js
+├── components/             # Reusable components
+│   ├── button.html
+│   ├── card.html
+│   └── loader.html
+├── animations/             # Animation demos
 │   ├── button/
-│   ├── loader/
-│   └── text/
-└── docs/                   # Documentation
+│   ├── text/
+│   └── loader/
+└── docs/                   # Documentation (future)
 ```
 
 🌟 What You’re Contributing To
