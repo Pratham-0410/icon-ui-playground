@@ -10,135 +10,142 @@ footer {
 }
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  /* =====================
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =====================
      HEADER
   ===================== */
-  .navbar {
-    background: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
-  }
-  
-  .nav-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 1.5rem;
-  }
-  
-  .nav-container h1 {
-    margin: 0;
-  }
-  
-  .nav-container p {
-    margin: 0.5rem 0 0;
-    color: var(--muted-text);
-  }
+.navbar {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
 
-  .theme-btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
-    color: var(--text-color);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .theme-btn:hover {
-    background: var(--border-color);
-  }
-  
-  /* =====================
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.nav-container h1 {
+  margin: 0;
+}
+
+.nav-container p {
+  margin: 0.5rem 0 0;
+  color: var(--muted-text);
+}
+
+.theme-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: var(--border-color);
+}
+
+/* =====================
      LAYOUT
   ===================== */
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 2rem 1.5rem;
-  }
-  
-  .intro {
-    max-width: 600px;
-    margin-bottom: 3rem;
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .intro p {
-    color: var(--muted-text);
-  }
-  
-  /* =====================
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+}
+
+.intro {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  color: var(--muted-text);
+}
+
+/* =====================
      GALLERY GRID
   ===================== */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
-  .card p {
-    color: var(--muted-text);
-  }
-  
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-  
-  /* =====================
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  font-size: medium;
+  text-align: center;
+
+  min-height: 220px;
+  padding: 48px 16px;
+
+  flex: 1 1 320px;
+
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--muted-text);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
      FOOTER
   ===================== */
-  footer {
-    margin-top: 4rem;
-    padding: 1.5rem;
-    text-align: center;
-    color: var(--muted-text);
-    border-top: 1px solid var(--border-color);
-    background: var(--bg-color);
-  }
-  
-  .card {
-    text-decoration: none;
-    color: inherit;
-  }
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--muted-text);
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
 
-  .use-cases {
-    margin-bottom: 3rem;
-  }
-  
-  .use-cases ul {
-    padding-left: 1.2rem;
-    color: var(--muted-text);
-  }
-  
-  .use-cases li {
-    margin-bottom: 0.5rem;
-  }
+.card {
+  text-decoration: none;
+  color: inherit;
+}
 
+.use-cases {
+  margin-bottom: 3rem;
+}
+
+.use-cases ul {
+  padding-left: 1.2rem;
+  color: var(--muted-text);
+}
+
+.use-cases li {
+  margin-bottom: 0.5rem;
+}
