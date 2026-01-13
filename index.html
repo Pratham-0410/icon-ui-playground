@@ -25,7 +25,12 @@
       <p class="muted">
         Each component demonstrates a common real-world UI interaction.
       </p>
-      <button id="themeToggle" class="theme-btn">
+
+      
+      <button
+        id="themeToggle"
+        class="theme-btn"
+        aria-label="Toggle between light and dark theme">
         Toggle Theme
       </button>
     </div>
@@ -37,7 +42,11 @@
       <h2>Control Panel</h2>
       <p>Real-time animation adjustments.</p>
 
-      <div id="controls-container" class="control-panel">
+      
+      <div
+        id="controls-container"
+        class="control-panel"
+        aria-label="Animation control panel">
       </div>
     </section>
 
@@ -63,17 +72,26 @@
     </section>
 
     <section class="gallery">
-      <a class="card" href="animations/button/button-hover.html">
+
+      
+      <a
+        class="card"
+        href="animations/button/button-hover.html"
+        aria-label="View hover animation example for a primary action button">
         <div class="card-preview">
-          <div class="preview-btn">Action</div>
+          <div class="preview-btn" aria-hidden="true">Action</div>
         </div>
         <h3>Primary Action Button</h3>
         <p>Hover feedback for primary actions.</p>
       </a>
 
-      <a class="card" href="animations/text/text-fade-in.html">
+      
+      <a
+        class="card"
+        href="animations/text/text-fade-in.html"
+        aria-label="View content reveal animation example">
         <div class="card-preview">
-          <div class="preview-text-lines">
+          <div class="preview-text-lines" aria-hidden="true">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
           </div>
@@ -82,13 +100,18 @@
         <p>Animated content entry.</p>
       </a>
 
-      <a class="card" href="animations/loader/loader-spin.html">
+      
+      <a
+        class="card"
+        href="animations/loader/loader-spin.html"
+        aria-label="View loading indicator spinner animation example">
         <div class="card-preview">
-          <div class="preview-loader"></div>
+          <div class="preview-loader" aria-hidden="true"></div>
         </div>
         <h3>Loading Indicator</h3>
         <p>Progress feedback during tasks.</p>
       </a>
+
     </section>
   </main>
 
