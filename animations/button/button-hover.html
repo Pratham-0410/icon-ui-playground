@@ -5,32 +5,10 @@
         <title>Button Hover Animation</title>
         <link rel="stylesheet" href="../../css/animation-theme.css">
         <link rel="stylesheet" href="../../css/accessibility.css">
-        <style>
-          body {
-            display: grid;
-            place-items: center;
-            height: 100vh;
-          }
-      
-          button {
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 8px;
-            background: var(--accent);
-            color: white;
-            cursor: pointer;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-          }
-      
-          button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-          }
-        </style>
+        <link rel="stylesheet" href="../../css/animations.css">
       </head>
-<body>
-  <button>Hover Me</button>
+<body class="animation-page">
+  <button class="button-hover-btn">Hover Me</button>
   <script>
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {

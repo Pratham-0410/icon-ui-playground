@@ -5,30 +5,10 @@
   <title>Text Fade In</title>
   <link rel="stylesheet" href="../../css/animation-theme.css">
   <link rel="stylesheet" href="../../css/accessibility.css">
-  <style>
-    body {
-      display: grid;
-      place-items: center;
-      height: 100vh;
-      font-family: system-ui, sans-serif;
-      background: #ffffff;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/animations.css">
 </head>
-<body>
-  <h1>Hello CSS Animations</h1>
+<body class="animation-page text-fade-in-page">
+  <h1 class="text-fade-in-title">Hello CSS Animations</h1>
   <script>
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
