@@ -89,7 +89,7 @@ body {
 
 .card {
   background: var(--card);
-  padding: 2rem;
+  padding: 200rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
