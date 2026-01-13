@@ -78,12 +78,17 @@ body {
   gap: 1.5rem;
 }
 
+
+
 .card {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .card h3 {
@@ -94,9 +99,11 @@ body {
   color: var(--muted-text);
 }
 
+
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--text-color);
 }
 
 .card-preview {
@@ -160,13 +167,11 @@ body {
 }
 
 @keyframes fadeInPulse {
-
   0%,
   100% {
     opacity: 0.3;
     transform: translateY(2px);
   }
-
   50% {
     opacity: 1;
     transform: translateY(0);
