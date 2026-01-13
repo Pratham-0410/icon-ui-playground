@@ -9,4 +9,30 @@
     scroll-behavior: auto !important;
   }
 
+  .card {
+    transform: none !important;
+  }
+}
+
+\
+.card:focus-visible {
+  outline: 3px solid var(--text-color);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* Focus style for buttons and interactive controls */
+button:focus-visible,
+.preview-btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--text-color);
+  outline-offset: 3px;
+}
+
+/* Remove default focus outline for mouse users */
+.card:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+.preview-btn:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
 }
