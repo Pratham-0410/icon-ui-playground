@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Loader Spinner</title>
+
+  <!-- Global Styles -->
   <link rel="stylesheet" href="../../css/animation-theme.css">
   <link rel="stylesheet" href="../../css/accessibility.css">
-  <style>
 
+  <style>
+    /* Page Background */
     body {
       display: grid;
       place-items: center;
       height: 100vh;
-      background: #f5f5f5;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      color: #e5e7eb;
+      background: #000; /* true black */
     }
 
+    /* Component Card */
+    .component-wrapper {
+      max-width: 420px;
+      width: 100%;
+      padding: 1.75rem;
+      border-radius: 14px;
+      background: #0b0b0b;
+
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #f9fafb;
+    }
+
+    /* Preview Area */
+    .preview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.01)
+      );
+    }
+
+    /* Loader */
     .loader {
       width: 50px;
       height: 50px;
-      border: 6px solid #ddd;
-      border-top: 6px solid #4f46e5;
+      border: 6px solid rgba(255, 255, 255, 0.15);
+      border-top: 6px solid var(--accent);
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
@@ -28,15 +70,97 @@
         transform: rotate(360deg);
       }
     }
+
+    /* Code Toggle */
+    details {
+      margin-top: 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+      color: #e5e7eb;
+    }
+
+    /* Code Block */
+    .code-block {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+
+      background: linear-gradient(
+        180deg,
+        #020617,
+        #000
+      );
+      color: #e5e7eb;
+
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .code-block h4 {
+      margin: 0.75rem 0 0.25rem;
+      font-size: 0.85rem;
+      color: #60a5fa;
+    }
+
+    pre {
+      margin: 0;
+    }
   </style>
 </head>
+
 <body>
-  <div class="loader"></div>
+
+  <section class="component-wrapper">
+    <h3>Loader Spinner</h3>
+
+    <!-- Live Preview -->
+    <div class="preview">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Code Section -->
+    <details>
+      <summary>Show Code</summary>
+
+      <div class="code-block">
+        <h4>HTML</h4>
+        <pre><code>
+<div class="loader"></div>
+        </code></pre>
+
+        <h4>CSS</h4>
+        <pre><code>
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  border-top: 6px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+        </code></pre>
+      </div>
+    </details>
+  </section>
+
+  <!-- Theme Sync -->
   <script>
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       document.body.classList.add("dark");
     }
   </script>
+
 </body>
 </html>
