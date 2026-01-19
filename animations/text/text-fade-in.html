@@ -17,7 +17,7 @@
       margin: 0;
       font-family: system-ui, sans-serif;
       color: #e5e7eb;
-      background: #000; /* true black */
+      background: #000;
     }
 
     /* Component Card */
@@ -27,7 +27,6 @@
       padding: 2rem;
       border-radius: 14px;
       background: #0b0b0b;
-
       border: 1px solid rgba(255, 255, 255, 0.05);
       box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.8),
@@ -47,7 +46,6 @@
       padding: 3rem 1rem;
       margin: 1rem 0;
       border-radius: 10px;
-
       background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.04),
@@ -55,12 +53,17 @@
       );
     }
 
+    /* Animation Variable */
+    :root {
+      --fade-duration: 1.2s;
+    }
+
     /* Animated Text */
     .fade-text {
       font-size: 2.5rem;
       font-weight: 600;
       opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
+      animation: fadeIn var(--fade-duration) ease forwards;
     }
 
     @keyframes fadeIn {
@@ -88,14 +91,8 @@
       border-radius: 10px;
       overflow-x: auto;
       font-size: 0.85rem;
-
-      background: linear-gradient(
-        180deg,
-        #020617,
-        #000
-      );
+      background: linear-gradient(180deg, #020617, #000);
       color: #e5e7eb;
-
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -108,53 +105,148 @@
     pre {
       margin: 0;
     }
+
+    /* ---------- Control Panel ---------- */
+    .control-panel {
+      max-width: 520px;
+      width: 100%;
+      margin-top: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 14px;
+      background: #0b0b0b;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 16px 32px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .control-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .control-header h4 {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #f9fafb;
+    }
+
+    .control-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #60a5fa;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .control-label {
+      font-size: 0.8rem;
+      color: #cbd5f5;
+    }
+
+    input[type="range"] {
+      appearance: none;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #2563eb);
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--accent);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--accent);
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Component -->
   <section class="component-wrapper">
     <h3>Text Fade In</h3>
 
-    <!-- Live Preview -->
     <div class="preview">
       <h1 class="fade-text">Hello CSS Animations</h1>
     </div>
 
-    <!-- Code Section -->
     <details>
       <summary>Show Code</summary>
 
       <div class="code-block">
         <h4>HTML</h4>
-        <pre><code>
-<h1 class="fade-text">Hello CSS Animations</h1>
-        </code></pre>
+        <pre><code>&lt;h1 class="fade-text"&gt;Hello CSS Animations&lt;/h1&gt;</code></pre>
 
         <h4>CSS</h4>
         <pre><code>
 .fade-text {
-  font-size: 2.5rem;
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  animation: fadeIn var(--fade-duration) ease forwards;
 }
         </code></pre>
       </div>
     </details>
   </section>
 
-  <!-- Theme Sync -->
+  <!-- Control Panel -->
+  <section class="control-panel">
+    <div class="control-header">
+      <h4>Controls</h4>
+      <span class="control-value" id="fadeValue">1.2s</span>
+    </div>
+
+    <label class="control-group">
+      <span class="control-label">Fade Duration</span>
+      <input
+        type="range"
+        min="0.2"
+        max="3"
+        step="0.1"
+        value="1.2"
+        id="fadeControl"
+      />
+    </label>
+  </section>
+
+  <!-- Scripts -->
   <script>
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       document.body.classList.add("dark");
     }
+
+    const slider = document.getElementById("fadeControl");
+    const valueLabel = document.getElementById("fadeValue");
+
+    function updateFade(value) {
+      document.documentElement.style.setProperty(
+        "--fade-duration",
+        `${value}s`
+      );
+      valueLabel.textContent = `${value}s`;
+    }
+
+    updateFade(slider.value);
+
+    slider.addEventListener("input", (e) => {
+      updateFade(e.target.value);
+    });
   </script>
 
 </body>
