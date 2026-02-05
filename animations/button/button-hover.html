@@ -7,7 +7,219 @@
   <!-- Global Styles -->
   <link rel="stylesheet" href="../../css/animation-theme.css">
   <link rel="stylesheet" href="../../css/accessibility.css">
+<<<<<<< HEAD
+
+  <style>
+    /* Page Background */
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      color: #e5e7eb;
+
+      /* True black background */
+      background: #000;
+    }
+
+    /* Component Card */
+    .component-wrapper {
+      max-width: 480px;
+      width: 100%;
+      padding: 1.75rem;
+      border-radius: 14px;
+
+      background: #0b0b0b;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #f9fafb;
+    }
+
+    /* Preview Area */
+    .preview {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.01)
+      );
+    }
+
+    /* Button */
+    button {
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+     
+    }
+
+    button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+    }
+
+    /* Code Toggle */
+    details {
+      margin-top: 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+      color: #e5e7eb;
+    }
+
+    /* Code Block */
+    .code-block {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+
+      background: linear-gradient(
+        180deg,
+        #020617,
+        #000
+      );
+      color: #e5e7eb;
+
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .code-block h4 {
+      margin: 0.75rem 0 0.25rem;
+      font-size: 0.85rem;
+      color: #60a5fa;
+    }
+
+    pre {
+      margin: 0;
+    }
+      
+      :root {
+    --hover-duration: 0.25s;
+      }
+
+      button {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--accent);
+        color: #fff;
+        cursor: pointer;
+
+        transition:
+          transform var(--hover-duration) ease,
+          box-shadow var(--hover-duration) ease;
+      }
+
+
+      /* Control Panel */
+  .control-panel {
+    max-width: 480px;
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 14px;
+
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  /* Header */
+  .control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .control-header h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #f9fafb;
+  }
+
+  .control-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #60a5fa;
+  }
+
+  /* Control Group */
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .control-label {
+    font-size: 0.8rem;
+    color: #cbd5f5;
+  }
+
+  /* Slider */
+  input[type="range"] {
+    appearance: none;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      var(--accent),
+      #2563eb
+    );
+    outline: none;
+    cursor: pointer;
+  }
+
+  /* Slider Thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+  }
+
+
+  </style>
+=======
   <link rel="stylesheet" href="../../css/animations.css">
+>>>>>>> eff3b676679130a92d92ecf1cfc3048120b4abe0
 </head>
 
 <body>
@@ -49,13 +261,51 @@ button:hover {
     </details>
   </section>
 
+<section class="control-panel">
+  <div class="control-header">
+    <h4>Controls</h4>
+    <span class="control-value" id="durationValue">1.0s</span>
+  </div>
+
+  <label class="control-group">
+    <span class="control-label">Hover Animation Duration</span>
+    <input
+      type="range"
+      min="0.2"
+      max="3"
+      step="0.1"
+      value="1"
+      id="durationControl"
+    />
+  </label>
+</section>
+
+
+
   <!-- Theme Sync -->
-  <script>
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.body.classList.add("dark");
-    }
-  </script>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  const slider = document.getElementById("durationControl");
+  const valueLabel = document.getElementById("durationValue");
+
+  function updateDuration(value) {
+    document.documentElement.style.setProperty(
+      "--hover-duration",
+      `${value}s`
+    );
+    valueLabel.textContent = `${value}s`;
+  }
+
+  updateDuration(slider.value);
+
+  slider.addEventListener("input", (e) => {
+    updateDuration(e.target.value);
+  });
+</script>
 
 </body>
 </html>
